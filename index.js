@@ -54,7 +54,7 @@ console.log('-----ปริ้นทั้งหมด-----' + JSON.stringify(da
      var beacon_id = req.body.events[0].beacon.hwid  
        //  if(beacon_1 == "0133a0751f"){
        //  profile(reToken, sende_r);    
-       //  }else if(beacon_1 == "0133a097a3"){
+       //  }else if(beacon_1 == "0133a0751f"){
        //  profile(reToken, sende_r);    
        //  } 
        profile(reToken, sende_r, beacon_id);  
@@ -152,7 +152,3 @@ function reply(reToken, msg, sende_r, beacon_id) {
     console.log("---data_enter---" + sende_r+"-------"+beacon_id);
 data_enter(sende_r, beacon_id);
 }
-
-
-
-
