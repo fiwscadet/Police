@@ -52,9 +52,9 @@ console.log('-----ปริ้นทั้งหมด-----' + JSON.stringify(da
      if (req.body.events[0].beacon.type == "enter") {   
         
      var beacon_id = req.body.events[0].beacon.hwid  
-       //  if(beacon_1 == "0133305fbd"){
+       //  if(beacon_1 == "0133a0751f"){
        //  profile(reToken, sende_r);    
-       //  }else if(beacon_1 == "013332298c"){
+       //  }else if(beacon_1 == "0133a097a3"){
        //  profile(reToken, sende_r);    
        //  } 
        profile(reToken, sende_r, beacon_id);  
@@ -73,7 +73,7 @@ console.log('-----ปริ้นทั้งหมด-----' + JSON.stringify(da
 function data_enter(sende_r, beacon_id) {
 
 
-   var checktime = "https://script.google.com/macros/s/AKfycbwaKkPZI8T248QXVlGGB-1N9et9rpw54ZshUuFboXY5J5zxTt0/exec?userId="+sende_r+"&beaconid="+beacon_id;
+   var checktime = "https://script.google.com/macros/s/AKfycbxZ4_XfKROefcqvh1wzT0xvEu2_DW-jJ5RaG1JeAlPLN2MTXEc/exec?userId="+sende_r+"&beaconid="+beacon_id;
  request(checktime, function (error, response, body) {
 
 })
@@ -106,13 +106,13 @@ var options = {
         var info = JSON.parse(body);
         name = info.displayName;
         
-          if(beacon_id == "0133305fbd"){
+          if(beacon_id == "0133a0751f"){
          var msg = {
            "type": "text",
            "text": "ระบบได้บันทึกข้อมูลของคุณ "+ name + "\nเรียบร้อยแล้ว\n Beacon 1"
           }; 
         reply(reToken, msg, sende_r, beacon_id);    
-         }else if(beacon_id == "013332298c"){
+         }else if(beacon_id == "0133a097a3"){
          var msg = {
            "type": "text",
            "text": "ระบบได้บันทึกข้อมูลของคุณ "+ name + "\nเรียบร้อยแล้ว\n Beacon 2"
